@@ -1,0 +1,77 @@
+@use "../utils/colors";
+@use "../utils/variables";
+@use "../utils/fonts";
+
+.portfolio {
+  padding-top: 0;
+
+  &__list {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__item {
+    transition: box-shadow variables.$duration variables.$timingfunction,
+      transform variables.$duration linear;
+
+    &:hover {
+      box-shadow: variables.$drop-shadow;
+    }
+
+    &:hover .portfolio__overlay {
+      transform: translatex(0);
+    }
+  }
+
+  &__card {
+    background: colors.getColor("white");
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 49px 29px;
+    background-color: colors.getColor("primary-tp");
+    transform: translateY(100%);
+    transition: transform 400ms ease;
+    z-index: 2;
+  }
+
+  &__image {
+    z-index: 1;
+    position: relative;
+  }
+
+  &__overlay-text {
+    font-size: fonts.$font-great;
+    color: colors.getColor("white");
+    line-height: 1.56;
+  }
+
+  &__description {
+    position: relative;
+    border: 1px solid colors.getColor("border-gray");
+    background-color: colors.getColor("white");
+    border-top: 0;
+    padding: 20px 24px;
+    z-index: 3;
+  }
+
+  &__heading {
+    font-weight: fonts.$font-bold;
+    font-size: fonts.$font-great;
+    line-height: 2;
+    letter-spacing: 0.06em;
+  }
+
+  &__text {
+    font-size: fonts.$font-medium;
+    line-height: 1.88;
+    color: colors.getColor("light-gray");
+  }
+}

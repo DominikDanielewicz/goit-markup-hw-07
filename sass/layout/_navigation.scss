@@ -1,0 +1,49 @@
+@use "../utils/variables";
+@use "../utils/colors";
+@use "../utils/mixins";
+@use "../utils/fonts";
+
+.nav {
+  font-size: fonts.$font-normal;
+  font-weight: fonts.$font-medium-bold;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  margin-right: auto;
+  height: 80px;
+
+  &__list {
+    gap: 46px;
+    height: 100%;
+    position: relative;
+  }
+
+  &__item {
+    @include mixins.flex-center;
+    position: relative;
+
+    &-active a {
+      color: colors.getColor("primary");
+    }
+
+    &-active::after {
+      content: "";
+      position: absolute;
+      height: 4px;
+      width: 100%;
+      background-color: colors.getColor("primary");
+      border-radius: 2px;
+      bottom: 0;
+    }
+  }
+
+  &__link {
+    color: colors.getColor("dark-gray");
+    transition: color variables.$duration variables.$timingfunction;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: colors.getColor("primary");
+    }
+  }
+}

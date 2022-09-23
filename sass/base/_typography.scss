@@ -1,0 +1,9 @@
+@use "../utils/fonts";
+
+.heading-secondary {
+  font-weight: fonts.$font-bold;
+  font-size: fonts.$font-enormous;
+  line-height: 1.17;
+  text-align: center;
+  margin-bottom: 50px;
+}
