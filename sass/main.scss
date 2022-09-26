@@ -1,5 +1,9 @@
+@use "utils/fonts";
+@use "utils/mixins";
+@use "utils/variables";
+@use "utils/colors";
+
 @use "base/base.scss";
-@use "base/typography";
 
 @use "layout/container";
 @use "layout/section";
@@ -18,8 +22,3 @@
 @use "components/modal";
 @use "components/filter";
 @use "components/portfolio";
-
-@use "utils/fonts";
-@use "utils/mixins";
-@use "utils/variables";
-@use "utils/colors";

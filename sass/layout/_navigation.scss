@@ -21,18 +21,20 @@
     @include mixins.flex-center;
     position: relative;
 
-    &-active a {
-      color: colors.getColor("primary");
-    }
+    &--active {
+      a {
+        color: colors.getColor("primary");
+      }
 
-    &-active::after {
-      content: "";
-      position: absolute;
-      height: 4px;
-      width: 100%;
-      background-color: colors.getColor("primary");
-      border-radius: 2px;
-      bottom: 0;
+      &::after {
+        content: "";
+        position: absolute;
+        height: 4px;
+        width: 100%;
+        background-color: colors.getColor("primary");
+        border-radius: 2px;
+        bottom: 0;
+      }
     }
   }
 

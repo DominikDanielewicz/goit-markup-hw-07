@@ -45,14 +45,6 @@ pre {
   cursor: pointer;
 }
 
-.heading-secondary {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  margin-bottom: 50px;
-}
-
 .container {
   max-width: 1200px;
   width: 100%;
@@ -62,6 +54,13 @@ pre {
 
 .section {
   padding: 94px 0px;
+}
+.section__header {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 .footer {
@@ -216,10 +215,10 @@ pre {
           align-items: center;
   position: relative;
 }
-.nav__item-active a {
+.nav__item--active a {
   color: #2196f3;
 }
-.nav__item-active::after {
+.nav__item--active::after {
   content: "";
   position: absolute;
   height: 4px;
